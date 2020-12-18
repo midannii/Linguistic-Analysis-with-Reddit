@@ -13,7 +13,7 @@ Reddit data를 이용한 언어학적 특성을 도출 😇
 
 1. crawling dataset from Reddits
 
-- `codes/for_crawling.ipynb`
+- `codes/crawling-reddit.ipynb`
 
 - with `pushshift API` & `psaw` in [pypl](pip install psaw)
 
@@ -23,15 +23,14 @@ Reddit data를 이용한 언어학적 특성을 도출 😇
 
 3. Linguistic Analysis with `LIWC`
 
-- `codes/final_analysis`
 
 - word count, word per sentences, words (> 6 letter)
 
 - sentimental analysis, sentimental classifications
 
-- personal interest, specific topics (e.g. social, money, death, ... )
+- pronouns analysis
 
-- parts of speech, tense, pronoun ..
+- time-oriented analysis
 
 4. Linguistic Analysis - replace `LIWC`
 
