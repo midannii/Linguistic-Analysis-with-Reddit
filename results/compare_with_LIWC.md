@@ -50,7 +50,7 @@
 
 ![fig1](assets/compare_fear.png)
 
-![fig1](assets/compare_anxiety.png)
+![fig1](assets/compare_sad.png)
 
 
 
