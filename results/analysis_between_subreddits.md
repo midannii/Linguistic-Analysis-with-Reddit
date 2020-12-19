@@ -80,6 +80,42 @@
 
 2. `Word per sentences`: 각 문장당 단어의 비율 (얼마나 긴 문장을 사용하는가)
 
+![fig](assets/wps_1.png)
+
+  - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+![fig](assets/wps_2.png)
+
+  -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+![fig](assets/wps_3.png)
+
+  둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+  - Ho: 모든 subreddit data의 word per sentence 의 median은 같다.
+
+![fig](assets/wps_4.png)
+
+-> 모든 subreddit data의 word per sentence의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+이번에는 각 subreddit 끼리의 word per sentence의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+- Ho: 서로 다른 두 subreddit data의 word per sentence 의 median은 같다.
+
+![fig](assets/wps_5.png)
+
+-> 서로 다른  subreddit data의 word per sentence의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+- Ho: 서로 다른 두 subreddit data의 word per sentence 의 mean은 같다.
+
+![fig](assets/wps_6.png)
+
+-> 서로 다른  subreddit data의 word per sentence의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
 
 
 <br>
