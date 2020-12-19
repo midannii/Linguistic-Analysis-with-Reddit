@@ -28,52 +28,52 @@
 
 1. `Word count`: 게시글 중 단어의 개수 (얼마나 긴 글을 게시하는가)
 
-[fig1](assets/compare_wc.png)
+![fig1](assets/compare_wc.png)
 
 2. `Word per sentences`: 각 문장당 단어의 비율 (얼마나 긴 문장을 사용하는가)
 
-[fig1](assets/compare_wps.png)
+![fig1](assets/compare_wps.png)
 
 3. `Sixltr`: 6글자 이상의 단어의 비율 (얼마나 긴 단어를 사용하는가)
 
-[fig1](assets/compare_6ltr.png)
+![fig1](assets/compare_6ltr.png)
 
 4. `Sentimental analysis`: 게시글의 긍부정적 정도 (positive, negative)
 
-[fig1](assets/compare_posemo.png)
+![fig1](assets/compare_posemo.png)
 
-[fig1](assets/compare_negemo.png)
+![fig1](assets/compare_negemo.png)
 
 5. `Sentimental classifications`: 게시글의 감정의 종류별 정도  (anger, fear, sadness, joy, trust, anticipation, disgust)
 
-[fig1](assets/compare_anger.png)
+![fig1](assets/compare_anger.png)
 
-[fig1](assets/compare_fear.png)
+![fig1](assets/compare_fear.png)
 
-[fig1](assets/compare_anxiety.png)
+![fig1](assets/compare_anxiety.png)
 
 
 
 6. `Pronouns Analysis`: 게시글 내의 인칭대명사의 비율 (1인칭대명사, 2인칭대명사, 3인칭대명사, 비인칭대명사)
 
-[fig1](assets/compare_1pers.png)
+![fig1](assets/compare_1pers.png)
 
-[fig1](assets/compare_2pers.png)
+![fig1](assets/compare_2pers.png)
 
-[fig1](assets/compare_3pers.png)
+![fig1](assets/compare_3pers.png)
 
-[fig1](assets/compare_nonpers.png)
+![fig1](assets/compare_nonpers.png)
 
 7. `Time-oriented Analysis`: 게시글에서 언급하는 시제 (과거, 현재, 미래)
 
 
   1) past
-[fig1](assets/compare_past.png)
+![fig1](assets/compare_past.png)
 
   2) present
-[fig1](assets/compare_present.png)
+![fig1](assets/compare_present.png)
 
   3) future
-[fig1](assets/compare_future.png)
+![fig1](assets/compare_future.png)
 
 <br>
