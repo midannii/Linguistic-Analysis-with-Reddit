@@ -68,12 +68,15 @@
 
 
   1) past
+
 ![fig1](assets/compare_past.png)
 
   2) present
+
 ![fig1](assets/compare_present.png)
 
   3) future
+  
 ![fig1](assets/compare_future.png)
 
 <br>
