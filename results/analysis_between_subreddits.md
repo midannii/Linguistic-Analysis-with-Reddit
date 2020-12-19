@@ -48,21 +48,21 @@
 1. `Word count`: 게시글 중 단어의 개수 (얼마나 긴 글을 게시하는가)
 
 
-![assets/wc_1.png]
+![fig](assets/wc_1.png)
 
   - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
 
-![assets/wc_2.png]
+![fig](assets/wc_2.png)
 
   -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
 
-![assets/wc_3.png]
+![fig](assets/wc_3.png)
 
   둘다 reject 이므로, Nonparametric chi-square test 진행
 
   - Ho: 각 subreddit의 word count 분포가 non-mental-health subreddit에서의 분포와 같다.
 
-![assets/wc_4.png]
+![fig](assets/wc_4.png)
 
 -> 정신질환 subreddit들의 word count 분포는 non-mental-health subreddit의 word count 분포와 유의미한 차이를 보임을 알 수 있다. (reject Ho)
 
@@ -72,7 +72,7 @@
 
  - Ho: 각 subreddit의 word count 분포가 서로 같다.
 
-![assets/wc_5.png]
+![fig](assets/wc_5.png)
 
 -> 각 subreddit들끼리의 word count 분포도 서로 유의미한 차이를 보임을 알 수 있다. (reject Ho)
 
