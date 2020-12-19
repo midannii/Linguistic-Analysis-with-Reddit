@@ -122,6 +122,43 @@
 
 3. `Sixltr`: 6글자 이상의 단어의 비율 (얼마나 긴 단어를 사용하는가)
 
+![fig](assets/sixltr_1.png)
+
+  - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+![fig](assets/sixltr_2.png)
+
+  -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+![fig](assets/sixltr_3.png)
+
+  둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+  - Ho: 모든 subreddit data의 sixltr 의 median은 같다.
+
+![fig](assets/sixltr_4.png)
+
+-> 모든 subreddit data의 sixltr의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+이번에는 각 subreddit 끼리의 sixltr의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+- Ho: 서로 다른 두 subreddit data의 sixltr 의 median은 같다.
+
+![fig](assets/sixltr_5.png)
+
+-> 서로 다른  subreddit data의 sixltr의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+- Ho: 서로 다른 두 subreddit data의 sixltr 의 mean은 같다.
+
+![fig](assets/sixltr_6.png)
+
+-> 서로 다른  subreddit data의 sixltr의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
 
 
 <br>
@@ -130,8 +167,84 @@
 
    1) positive
 
+   ![fig](assets/pos_1.png)
+
+     - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+   ![fig](assets/pos_2.png)
+
+     -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+   ![fig](assets/pos_3.png)
+
+     둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+     - Ho: 모든 subreddit data의 positive rates 의 median은 같다.
+
+   ![fig](assets/pos_4.png)
+
+   -> 모든 subreddit data의 positive rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+   이번에는 각 subreddit 끼리의 positive rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+   - Ho: 서로 다른 두 subreddit data의 positive rates 의 median은 같다.
+
+   ![fig](assets/pos_5.png)
+
+   -> 서로 다른  subreddit data의 positive rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+   해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+   따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+   - Ho: 서로 다른 두 subreddit data의 positive rates 의 mean은 같다.
+
+   ![fig](assets/pos_6.png)
+
+   -> 서로 다른  subreddit data의 positive rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+
 
    2) negative
+
+   ![fig](assets/neg_1.png)
+
+     - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+   ![fig](assets/neg_2.png)
+
+     -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+   ![fig](assets/neg_3.png)
+
+     둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+     - Ho: 모든 subreddit data의 negative rates 의 median은 같다.
+
+   ![fig](assets/neg_4.png)
+
+   -> 모든 subreddit data의 negative rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+   이번에는 각 subreddit 끼리의 negative rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+   - Ho: 서로 다른 두 subreddit data의 negative rates 의 median은 같다.
+
+   ![fig](assets/neg_5.png)
+
+   -> 서로 다른  subreddit data의 negative rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+   해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+   따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+   - Ho: 서로 다른 두 subreddit data의 negative rates 의 mean은 같다.
+
+   ![fig](assets/neg_6.png)
+
+   -> 서로 다른  subreddit data의 negative rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
 
 
 <br>
@@ -140,17 +253,340 @@
 
   1) anger
 
+  ![fig](assets/anger_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/anger_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/anger_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 anger rates 의 median은 같다.
+
+  ![fig](assets/anger_4.png)
+
+  -> 모든 subreddit data의 anger rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 anger rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 anger rates 의 median은 같다.
+
+  ![fig](assets/anger_5.png)
+
+  -> 서로 다른  subreddit data의 anger rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 anger rates 의 mean은 같다.
+
+  ![fig](assets/anger_6.png)
+
+  -> 서로 다른  subreddit data의 anger rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
+
   2) fear
+
+
+  ![fig](assets/fear_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/fear_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/fear_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 fear rates 의 median은 같다.
+
+  ![fig](assets/fear_4.png)
+
+  -> 모든 subreddit data의 fear rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 fear rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 fear rates 의 median은 같다.
+
+  ![fig](assets/fear_5.png)
+
+  -> 서로 다른  subreddit data의 fear rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 fear rates 의 mean은 같다.
+
+  ![fig](assets/fear_6.png)
+
+  -> 서로 다른  subreddit data의 fear rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
+
 
   3) sadness
 
+  ![fig](assets/sadness_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/sadness_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/sadness_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 sadness rates 의 median은 같다.
+
+  ![fig](assets/sadness_4.png)
+
+  -> 모든 subreddit data의 sadness rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 sadness rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 sadness rates 의 median은 같다.
+
+  ![fig](assets/sadness_5.png)
+
+  -> 서로 다른  subreddit data의 sadness rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 sadness rates 의 mean은 같다.
+
+  ![fig](assets/sadness_6.png)
+
+  -> 서로 다른  subreddit data의 sadness rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
+
+
   4) joy
+
+
+  ![fig](assets/joy_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/joy_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/joy_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 joy rates 의 median은 같다.
+
+  ![fig](assets/joy_4.png)
+
+  -> 모든 subreddit data의 joy rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 joy rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 joy rates 의 median은 같다.
+
+  ![fig](assets/joy_5.png)
+
+  -> 서로 다른  subreddit data의 joy rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 joy rates 의 mean은 같다.
+
+  ![fig](assets/joy_6.png)
+
+  -> 서로 다른  subreddit data의 joy rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
+
 
   5) trust
 
+  ![fig](assets/trust_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/trust_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/trust_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 trust rates 의 median은 같다.
+
+  ![fig](assets/trust_4.png)
+
+  -> 모든 subreddit data의 trust rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 trust rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 trust rates 의 median은 같다.
+
+  ![fig](assets/trust_5.png)
+
+  -> 서로 다른  subreddit data의 trust rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 trust rates 의 mean은 같다.
+
+  ![fig](assets/trust_6.png)
+
+  -> 서로 다른  subreddit data의 trust rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
+
+
   6) anticipation
 
+  ![fig](assets/anticipation_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/anticipation_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/anticipation_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 anticipation rates 의 median은 같다.
+
+  ![fig](assets/anticipation_4.png)
+
+  -> 모든 subreddit data의 anticipation rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 anticipation rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 anticipation rates 의 median은 같다.
+
+  ![fig](assets/anticipation_5.png)
+
+  -> 서로 다른  subreddit data의 anticipation rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 anticipation rates 의 mean은 같다.
+
+  ![fig](assets/anticipation_6.png)
+
+  -> 서로 다른  subreddit data의 anticipation rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
+
+
   7) disgust
+
+
+  ![fig](assets/disgust_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/disgust_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/disgust_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 disgust rates 의 median은 같다.
+
+  ![fig](assets/disgust_4.png)
+
+  -> 모든 subreddit data의 disgust rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 disgust rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 disgust rates 의 median은 같다.
+
+  ![fig](assets/disgust_5.png)
+
+  -> 서로 다른  subreddit data의 disgust rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 disgust rates 의 mean은 같다.
+
+  ![fig](assets/disgust_6.png)
+
+  -> 서로 다른  subreddit data의 disgust rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
+
+8) surprise
+
+
+![fig](assets/surprise_1.png)
+
+  - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+![fig](assets/surprise_2.png)
+
+  -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+![fig](assets/surprise_3.png)
+
+  둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+  - Ho: 모든 subreddit data의 surprise rates 의 median은 같다.
+
+![fig](assets/surprise_4.png)
+
+-> 모든 subreddit data의 surprise rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+이번에는 각 subreddit 끼리의 surprise rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+- Ho: 서로 다른 두 subreddit data의 surprise  rates 의 median은 같다.
+
+![fig](assets/surprise_5.png)
+
+-> 서로 다른  subreddit data의 surprise rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+- Ho: 서로 다른 두 subreddit data의 surprise rates 의 mean은 같다.
+
+![fig](assets/surprise_6.png)
+
+-> 서로 다른  subreddit data의 surprise rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
 
 <br>
 
@@ -159,23 +595,296 @@
 
   1) 1pers(1인칭대명사)
 
+  ![fig](assets/1pers_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/1pers_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/1pers_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 1pers rates 의 median은 같다.
+
+  ![fig](assets/1pers_4.png)
+
+  -> 모든 subreddit data의 1pers rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 1pers rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 1pers rates 의 median은 같다.
+
+  ![fig](assets/1pers_5.png)
+
+  -> 서로 다른  subreddit data의 1pers rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 1pers rates 의 mean은 같다.
+
+  ![fig](assets/1pers_6.png)
+
+  -> 서로 다른  subreddit data의 1pers rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
+
   2) 2pers(2인칭대명사)
+
+  ![fig](assets/2pers_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/2pers_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/2pers_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 2pers rates 의 median은 같다.
+
+  ![fig](assets/2pers_4.png)
+
+  -> 모든 subreddit data의 2pers rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 2pers rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 2pers rates 의 median은 같다.
+
+  ![fig](assets/2pers_5.png)
+
+  -> 서로 다른  subreddit data의 2pers rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 2pers rates 의 mean은 같다.
+
+  ![fig](assets/2pers_6.png)
+
+  -> 서로 다른  subreddit data의 2pers rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
 
   3) 3pers(3인칭대명사)
 
+
+  ![fig](assets/3pers_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/3pers_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/3pers_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 3pers rates 의 median은 같다.
+
+  ![fig](assets/3pers_4.png)
+
+  -> 모든 subreddit data의 3pers rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 3pers rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 3pers rates 의 median은 같다.
+
+  ![fig](assets/3pers_5.png)
+
+  -> 서로 다른  subreddit data의 3pers rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 3pers rates 의 mean은 같다.
+
+  ![fig](assets/3pers_6.png)
+
+  -> 서로 다른  subreddit data의 3pers rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
+
   4) nonpers(비인칭대명사)
+  ![fig](assets/nonpers_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/nonpers_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/nonpers_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 nonpers rates 의 median은 같다.
+
+  ![fig](assets/nonpers_4.png)
+
+  -> 모든 subreddit data의 nonpers rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 nonpers rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 nonpers rates 의 median은 같다.
+
+  ![fig](assets/nonpers_5.png)
+
+  -> 서로 다른  subreddit data의 nonpers rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 nonpers rates 의 mean은 같다.
+
+  ![fig](assets/nonpers_6.png)
+
+  -> 서로 다른  subreddit data의 nonpers rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
 
 <br>
 
 7. `Time-oriented Analysis`: 게시글에서 언급하는 시제 (과거, 현재, 미래)
 
-  1) 과거
+  1) past
 
-  2) 현재
+  ![fig](assets/past_1.png)
 
-  3) 미래
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/past_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/past_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 past rates 의 median은 같다.
+
+  ![fig](assets/past_4.png)
+
+  -> 모든 subreddit data의 past rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 past rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 past rates 의 median은 같다.
+
+  ![fig](assets/past_5.png)
+
+  -> 서로 다른  subreddit data의 past rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 past rates 의 mean은 같다.
+
+  ![fig](assets/past_6.png)
+
+  -> 서로 다른  subreddit data의 past rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
 
 <br>
+
+  2) present
+
+  ![fig](assets/present_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/present_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/present_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 present rates 의 median은 같다.
+
+  ![fig](assets/present_4.png)
+
+  -> 모든 subreddit data의 present rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 present rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 present rates 의 median은 같다.
+
+  ![fig](assets/present_5.png)
+
+  -> 서로 다른  subreddit data의 present rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 present rates 의 mean은 같다.
+
+  ![fig](assets/present_6.png)
+
+  -> 서로 다른  subreddit data의 present rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+<br>
+
+  3) future
+
+  ![fig](assets/future_1.png)
+
+    - Normality test 1 with D'Agostino-Pearson normality test (alpha = 0.05)
+
+  ![fig](assets/future_2.png)
+
+    -  Homogeneity of variance test 2 with levene test (alpha = 0.05)
+
+  ![fig](assets/future_3.png)
+
+    둘다 reject 이므로, Nonparametric Kruskal-Wallis test (alpha = 0.05) 를 통해 각 분포를 비교
+
+    - Ho: 모든 subreddit data의 future rates 의 median은 같다.
+
+  ![fig](assets/future_4.png)
+
+  -> 모든 subreddit data의 future rates의 median은 통계학적으로 다르다는 것을 알 수 있다. (reject Ho)
+
+  이번에는 각 subreddit 끼리의 future rates의 median을 비교했다. 이때, Man-Whitney U test 를 이용하였으며, Bonferroni correction을 적용하였다. (alpha = 0.05/6)
+
+  - Ho: 서로 다른 두 subreddit data의 future rates 의 median은 같다.
+
+  ![fig](assets/future_5.png)
+
+  -> 서로 다른  subreddit data의 future rates의 median은 다르다는 것을 알 수 있다. (reject Ho)
+
+
+  해당 데이터는 등분산 조건을 만족하지는 못했지만, Central Limit theorem에 의해 정규분포로 가정할 수 있다.
+
+  따라서, 이분산 조건에서의 t test를 이용해 아래 귀무가설을 검정할 수 있다.
+
+  - Ho: 서로 다른 두 subreddit data의 future rates 의 mean은 같다.
+
+  ![fig](assets/future_6.png)
+
+  -> 서로 다른  subreddit data의 future rates의 mean은 대부분 차이가 있음을 알 수 있다. (reject Ho)
+
+
+<br>
+
 
 <br>
 
